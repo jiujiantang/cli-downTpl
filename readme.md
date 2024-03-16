@@ -8,6 +8,8 @@
 ```
 
 目录：
+```js
+/**
 |bin
     --plutoCli.js
 |lib
@@ -15,6 +17,8 @@
     --generator.js
     --http.js
 --package.json
+ */
+```
 
 #### 第一步：处理依赖
 ```js
