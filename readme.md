@@ -1,5 +1,5 @@
 ### 脚手架
-* 快速自动化搭建启动项目工具
+快速自动化搭建启动项目工具
 
 目标：
 ```js
@@ -9,15 +9,15 @@
 
 目录：
 ```js
-/**
-|bin
-    --plutoCli.js
-|lib
-    --create.js
-    --generator.js
-    --http.js
---package.json
- */
+    /**
+    |bin
+        --plutoCli.js
+    |lib
+        --create.js
+        --generator.js
+        --http.js
+    --package.json
+    */
 ```
 
 #### 第一步：处理依赖
@@ -68,19 +68,19 @@
 
 ### case
 ```js
-// 封装loading外壳
-async function wrapLoading(fn, message, ...args) {
-    const spinner = ora(message)
+    // 封装loading外壳
+    async function wrapLoading(fn, message, ...args) {
+        const spinner = ora(message)
 
-    spinner.start()
+        spinner.start()
 
-    try {
-        const result = await fn(...args)
+        try {
+            const result = await fn(...args)
 
-        spinner.succeed()
-        return result
-    } catch (error) {
-        spinner.fail('Requiest failed, please refetch...')
+            spinner.succeed()
+            return result
+        } catch (error) {
+            spinner.fail('Requiest failed, please refetch...')
+        }
     }
-}
 ```
